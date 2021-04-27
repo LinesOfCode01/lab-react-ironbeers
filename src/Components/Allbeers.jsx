@@ -1,24 +1,34 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
-import { Link, Route, Switch } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import NavBar from './NavBar';
 
-const Allbeers = () => {
+const AllBeers = (props) => {
   const [beer, setBeer] = useState([]);
 
   useEffect(() => {
-    axios.get('https://ih-beers-api2.herokuapp.com/beers').then((res) => {
-      setBeer(res.data);
+    axios.get('https://ih-beers-api2.herokuapp.com/beers').then((response) => {
+      console.log(response.data);
+      setBeer(response.data);
     });
   }, []);
 
   const showBeers = () => {
-    return beer.map((beer, i) => {
+    return beer.map((beer) => {
       return (
-        <div>
+        <div className="beerOptions">
           <div>
+            <img className="beerImg" src={beer.image_url} alt="" />
+          </div>
+          <div className="beerInfo">
             <Link to={`/beer/${beer._id}`}>
-              <img src={beer.imgae_url} />
+              <h2>{beer.name}</h2>
+              <img src={beer.imgae_url} alt="" />
             </Link>
+            <h3>{beer.tagline}</h3>
+            <p>
+              <b>Created by:</b> {beer.contributed_by}
+            </p>
           </div>
         </div>
       );
@@ -27,10 +37,10 @@ const Allbeers = () => {
 
   return (
     <div>
+      <NavBar />
       {showBeers()}
-      gi{''}
     </div>
   );
 };
 
-export default Allbeers;
+export default AllBeers;

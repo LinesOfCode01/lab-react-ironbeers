@@ -5,8 +5,8 @@ const Home = () => {
   return (
     <div>
       <div>
-        <img src="./assets/beers.png" />
-        <Link to="./Allbeers">
+        <img src="./assets/beers.png" alt="" />
+        <Link to="./AllBeers">
           <h1>All Beers</h1>
         </Link>
         <p>
@@ -18,8 +18,8 @@ const Home = () => {
       </div>
 
       <div>
-        <img src="./assets/new-beer.png" />
-        <Link to="/Randombeer">
+        <img src="./assets/new-beer.png" alt="" />
+        <Link to="/RandomBeer">
           <h1>Random Beer</h1>
         </Link>
         <p>
@@ -30,7 +30,7 @@ const Home = () => {
         </p>
       </div>
       <div>
-        <img src="./assets/random-beer.png" />
+        <img src="./assets/random-beer.png" alt="" />
         <Link to="/Newbeer">
           <h1>New Beer</h1>
         </Link>

@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import NavBar from './NavBar';
 
-import Navbar from './Navbar';
-
-const Randombeer = (props) => {
+const RandomBeer = (props) => {
   const [beer, setBeer] = useState([]);
   console.log(props);
   useEffect(() => {
@@ -16,9 +15,9 @@ const Randombeer = (props) => {
 
   return (
     <div>
-      <Navbar />
+      <NavBar />
       <div style={{ marginTop: '4rem' }}>
-        <img style={{ height: '10rem' }} src={beer.image_url} />
+        <img style={{ height: '10rem' }} src={beer.image_url} alt="" />
         <div>
           <b>Name:</b>
           {beer.name}
@@ -45,4 +44,4 @@ const Randombeer = (props) => {
   );
 };
 
-export default Randombeer;
+export default RandomBeer;
