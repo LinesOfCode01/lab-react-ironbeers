@@ -2,14 +2,14 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import NavBar from './NavBar';
 
-const RandomBeer = (props) => {
+const Randombeer = (props) => {
   const [beer, setBeer] = useState([]);
   console.log(props);
   useEffect(() => {
     axios
       .get(`https://ih-beers-api2.herokuapp.com/beers/random`)
-      .then((res) => {
-        setBeer(res.data);
+      .then((response) => {
+        setBeer(response.data);
       });
   }, []);
 
@@ -44,4 +44,4 @@ const RandomBeer = (props) => {
   );
 };
 
-export default RandomBeer;
+export default Randombeer;

@@ -6,7 +6,7 @@ const Home = () => {
     <div>
       <div>
         <img src="./assets/beers.png" alt="" />
-        <Link to="./AllBeers">
+        <Link to="./Allbeers">
           <h1>All Beers</h1>
         </Link>
         <p>
@@ -18,8 +18,8 @@ const Home = () => {
       </div>
 
       <div>
-        <img src="./assets/new-beer.png" alt="" />
-        <Link to="/RandomBeer">
+        <img src="./assets/random-beer.png" alt="" />
+        <Link to="/Randombeer">
           <h1>Random Beer</h1>
         </Link>
         <p>
@@ -30,7 +30,7 @@ const Home = () => {
         </p>
       </div>
       <div>
-        <img src="./assets/random-beer.png" alt="" />
+        <img src="./assets/new-beer.png" alt="" />
         <Link to="/Newbeer">
           <h1>New Beer</h1>
         </Link>
